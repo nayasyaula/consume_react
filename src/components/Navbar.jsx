@@ -10,7 +10,7 @@ export default function Navbar() {
     const location = useLocation();
 
     useEffect(() => {
-        axios.get('http://localhost:8000/profile', {
+        axios.get('http://localhost:8000/login', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('access_token'),
             }
@@ -37,11 +37,12 @@ export default function Navbar() {
                     <div className="flex items-center justify-between">
                         <div>
                         <Link
-                            className="mr-2 text-sm font-semibold uppercase text-white"
+                            className="mr-2 text-sm font-semibold uppercase text-white ms 3"
                             to="/dashboard"
                         >
                             INVENTARIS APP
                         </Link>
+                            
                         <Link to="/login" className="text-white">Login</Link>
                         {
                             isLogin ? authUser['role'] == 'admin' ? (
