@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import Case from './components/Case';
+import { Link } from 'react-router-dom';
 
 export default function App() {
   return (
-    <Case>
       <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div>
@@ -24,8 +24,12 @@ export default function App() {
               <li>User-friendly interface</li>
             </ul>
           </div>
+          <div className="mt-6 flex items-center justify-center">
+            <Link to={"/login"} className="px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+              Login to Your Account
+            </Link>
+          </div>
         </div>
       </div>
-    </Case>
   );
 }

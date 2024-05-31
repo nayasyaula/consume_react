@@ -10,7 +10,7 @@ export default function Navbar() {
     const location = useLocation();
 
     useEffect(() => {
-        axios.get('http://localhost:8000/login', {
+        axios.get('http://localhost:8000/profile', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('access_token'),
             }
